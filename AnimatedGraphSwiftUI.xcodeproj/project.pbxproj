@@ -13,6 +13,8 @@
 		C034175825BA021A007E53AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C034175725BA021A007E53AA /* Assets.xcassets */; };
 		C034175B25BA021A007E53AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C034175A25BA021A007E53AA /* Preview Assets.xcassets */; };
 		C034175E25BA021A007E53AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C034175C25BA021A007E53AA /* LaunchScreen.storyboard */; };
+		C034176725BA041C007E53AA /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034176625BA041C007E53AA /* BarGraph.swift */; };
+		C034176A25BA07B2007E53AA /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034176925BA07B2007E53AA /* ReportModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C034175A25BA021A007E53AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C034175D25BA021A007E53AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C034175F25BA021A007E53AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C034176625BA041C007E53AA /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		C034176925BA07B2007E53AA /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				C034175125BA0219007E53AA /* AppDelegate.swift */,
 				C034175325BA0219007E53AA /* SceneDelegate.swift */,
+				C034176925BA07B2007E53AA /* ReportModel.swift */,
+				C034176625BA041C007E53AA /* BarGraph.swift */,
 				C034175525BA0219007E53AA /* ContentView.swift */,
 				C034175725BA021A007E53AA /* Assets.xcassets */,
 				C034175C25BA021A007E53AA /* LaunchScreen.storyboard */,
@@ -145,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C034176725BA041C007E53AA /* BarGraph.swift in Sources */,
 				C034175225BA0219007E53AA /* AppDelegate.swift in Sources */,
+				C034176A25BA07B2007E53AA /* ReportModel.swift in Sources */,
 				C034175425BA0219007E53AA /* SceneDelegate.swift in Sources */,
 				C034175625BA0219007E53AA /* ContentView.swift in Sources */,
 			);
