@@ -9,28 +9,43 @@ import Foundation
 import SwiftUI
 
 struct  BarGraph: View {
+    
+    let reports: [ReportModel]
+    
     var body: some View {
         
         VStack {
             
             HStack(alignment: .lastTextBaseline) {
                 
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: 100, height: 120)
-                    .padding()
-                Rectangle()
-                    .fill(Color.green)
-                    .frame(width: 100, height: 150)
-                    .padding()
-                Rectangle()
-                    .fill(Color.orange)
-                    .frame(width: 100, height: 180)
-                    .padding()
-                Spacer()
+                ForEach(self.reports, id: \.year) { report in
+                    BarView(report: report)
+                    
+                    
+                }
                 
             }
             
+        }
+    }
+}
+
+struct BarView: View {
+    let report: ReportModel
+    
+    var body: some View{
+        
+        let value = report.revenue / 500
+        let yValue = Swift.min(value * 20, 500)
+       
+        
+        return VStack {
+            
+            Text(String(format: "$%.2f", report.revenue))
+            Rectangle()
+                .fill(Color/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width: 100, height: CGFloat(yValue))
+            Text(report.year)
         }
     }
 }
@@ -39,6 +54,6 @@ struct  BarGraph: View {
 struct BarGraph_Previews: PreviewProvider {
     
     static var previews: some View {
-        BarGraph()
+        BarGraph(reports: ReportModel.all())
     }
 }
