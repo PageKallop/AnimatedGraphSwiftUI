@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//crates a revenue and year model to return
 struct ReportModel: Hashable {
     
     let year: String

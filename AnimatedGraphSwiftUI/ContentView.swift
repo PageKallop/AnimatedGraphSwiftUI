@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        //implements Bar graph 
         BarGraph(reports: ReportModel.all())
         
     }

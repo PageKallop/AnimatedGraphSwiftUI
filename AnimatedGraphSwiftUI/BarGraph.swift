@@ -31,20 +31,29 @@ struct  BarGraph: View {
 }
 
 struct BarView: View {
+    
     let report: ReportModel
+    //creates a state for the graph
+    @State private var showGraph: Bool = false
     
     var body: some View{
-        
+        //sets value of reportmodel
         let value = report.revenue / 500
         let yValue = Swift.min(value * 20, 500)
        
         
         return VStack {
-            
+            //displays graph
             Text(String(format: "$%.2f", report.revenue))
             Rectangle()
                 .fill(Color/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .frame(width: 100, height: CGFloat(yValue))
+                .frame(width: 100, height: self.showGraph ? CGFloat(yValue) : 0.0)
+                .onAppear {
+                    withAnimation(.spring()) {
+                        self.showGraph = true
+                    }
+                }
+            
             Text(report.year)
         }
     }
