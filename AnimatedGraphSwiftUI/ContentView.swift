@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var tapped: Bool = false
     var body: some View {
+        VStack{
         //implements Bar graph 
         BarGraph(reports: ReportModel.all())
-        
+           
+            Card(tapped: self.tapped)
+                .gesture(TapGesture(count: 1)
+                        .onEnded({ () in
+                            self.tapped.toggle()
+                        })
+                )
+         }
     }
 }
 

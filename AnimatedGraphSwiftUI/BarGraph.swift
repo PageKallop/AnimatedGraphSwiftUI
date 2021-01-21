@@ -14,7 +14,10 @@ struct  BarGraph: View {
     
     var body: some View {
         
+        
         VStack {
+            
+        
             
             HStack(alignment: .lastTextBaseline) {
                 
