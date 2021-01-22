@@ -16,6 +16,7 @@
 		C034176725BA041C007E53AA /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034176625BA041C007E53AA /* BarGraph.swift */; };
 		C034176A25BA07B2007E53AA /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034176925BA07B2007E53AA /* ReportModel.swift */; };
 		C034176D25BA13F6007E53AA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034176C25BA13F6007E53AA /* Card.swift */; };
+		C05BEDA325BB409800CD9111 /* NewForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BEDA225BB409800CD9111 /* NewForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C034176625BA041C007E53AA /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 		C034176925BA07B2007E53AA /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
 		C034176C25BA13F6007E53AA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C05BEDA225BB409800CD9111 /* NewForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C034175325BA0219007E53AA /* SceneDelegate.swift */,
 				C034176925BA07B2007E53AA /* ReportModel.swift */,
 				C034176625BA041C007E53AA /* BarGraph.swift */,
+				C05BEDA225BB409800CD9111 /* NewForm.swift */,
 				C034176C25BA13F6007E53AA /* Card.swift */,
 				C034175525BA0219007E53AA /* ContentView.swift */,
 				C034175725BA021A007E53AA /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				C034175225BA0219007E53AA /* AppDelegate.swift in Sources */,
 				C034176A25BA07B2007E53AA /* ReportModel.swift in Sources */,
 				C034175425BA0219007E53AA /* SceneDelegate.swift in Sources */,
+				C05BEDA325BB409800CD9111 /* NewForm.swift in Sources */,
 				C034175625BA0219007E53AA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
