@@ -58,6 +58,7 @@ struct BarView: View {
                 }
             
             Text(report.year)
+                .font(.system(size: 20, weight: .heavy, design: .default))
         }
     }
 }

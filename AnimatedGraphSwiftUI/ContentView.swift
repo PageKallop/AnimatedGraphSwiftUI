@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var tapped: Bool = false
+    @State private var cardRotate: Double = 0
     @State private var cardDragState = CGSize.zero
     
     
@@ -17,10 +18,16 @@ struct ContentView: View {
         VStack{
         //implements Bar graph 
         BarGraph(reports: ReportModel.all())
-           
+            .padding()
             Card(tapped: self.tapped)
                 .animation(.easeInOut)
                 .offset(y: self.cardDragState.height)
+                .rotationEffect(Angle(degrees: self.cardRotate))
+                .gesture(RotationGesture()
+                            .onChanged { value in
+                                self.cardRotate = value.degrees
+                            }
+                )
                 .gesture(DragGesture()
                             .onChanged { value in
                                 self.cardDragState = value.translation
@@ -36,7 +43,7 @@ struct ContentView: View {
                             self.tapped.toggle()
                         })
                 )
-         }
+        }.padding()
     }
 }
 
