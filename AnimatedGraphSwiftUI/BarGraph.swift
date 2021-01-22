@@ -52,7 +52,7 @@ struct BarView: View {
                 .fill(Color/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 .frame(width: 100, height: self.showGraph ? CGFloat(yValue) : 0.0)
                 .onAppear {
-                    withAnimation(.spring()) {
+                    withAnimation(.easeIn(duration: 1)) {
                         self.showGraph = true
                     }
                 }
