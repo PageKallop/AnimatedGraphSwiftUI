@@ -11,22 +11,27 @@ struct ModalPractice: View {
     let domino = ["a","🁫","🁫","🁫","🁫","🁫","🁫"]
     @State private var showModal: Bool = false
     @State private var selectedDomino: String = ""
+    @State private var country: String = ""
     
+    @State private var flageVM = FlagViewModel()
     var body: some View {
         List{
-            ForEach(0..<self.domino.count) { index in
-               
+            
+            Text(self.flageVM.country)
+            ForEach(self.domino, id: \.self) { domino in
                 HStack {
-                    Text(self.domino[index]).font(.custom("Ariel", size: 100))
-                    Text("Domino \(index)")
+                    Text(domino)
+                        .font(.custom("Arial", size: 100))
+                    Spacer()
                 }.onTapGesture {
-                    self.showModal.toggle()
-                    self.selectedDomino = self.domino[index]
+                    self.flageVM.domino = domino
+                    self.flageVM.showModel.toggle()
                 }
             }
-        }.sheet(isPresented: self.$showModal) {
-            Text(self.selectedDomino)
-                .font(.custom("Ariel", size: 200))
+            
+            
+        }.sheet(isPresented: self.$flageVM.showModel) {
+            FlagDetailView(flagVM: $flageVM)
         }
         
     }
