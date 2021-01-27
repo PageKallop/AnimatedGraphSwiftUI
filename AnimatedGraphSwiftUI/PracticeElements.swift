@@ -9,22 +9,30 @@ import SwiftUI
 
 struct PracticeElements: View {
     
-   
-    @ObservedObject var settingVM = SearchBar()
+    let url: String
+    let placeholder: String
     
+    @ObservedObject var imageLoader = SearBar()
+    
+    init(url: String, placeholder: String = "placeholder") {
+        self.url = url
+        self.placeholder = placeholder
+        self.imageLoader.downloadImage(url: self.url)
+        
+    }
     var body: some View {
-        VStack(alignment: .center) {
-            Toggle(isOn: self.$settingVM.isOn){
-                Text("")
-            }.fixedSize()
+        
+        if let data = self.imageLoader.downloadedData {
+            return Image(uiImage: UIImage(data: data)!).resizable()
             
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(self.$settingVM.isOn.wrappedValue ? Color.green : Color.red)
+        } else{
+            return Image("placeholder").resizable()
+        }
     }
 }
 
 struct PracticeElements_Previews: PreviewProvider {
     static var previews: some View {
-        PracticeElements()
+        PracticeElements(url: "Monk")
     }
 }
