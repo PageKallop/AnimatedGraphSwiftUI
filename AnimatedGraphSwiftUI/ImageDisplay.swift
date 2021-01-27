@@ -9,17 +9,34 @@ import SwiftUI
 
 struct ImageDisplay: View {
     
-    let posters = ["https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://post.healthline.com/wp-content/uploads/2020/08/edible-flowers-732x549-thumbnail.jpg", "https://c.files.bbci.co.uk/957C/production/_111686283_pic1.png"]
+    @Binding var rating: Int?
+    
+    private func starType(index: Int) ->String {
+        
+        if let rating = self.rating {
+            return index <= rating ? "star.fill" : "star"
+        } else {
+            return "star"
+        }
+        
+    }
+    
     var body: some View {
-        List(self.posters, id: \.self) { poster in
-            PracticeElements(url: poster)
-                .aspectRatio(contentMode: .fit)
+        
+        HStack {
+            ForEach(1...5, id: \.self) { index in
+                Image(systemName: self.starType(index: index))
+                    .foregroundColor(Color.orange)
+                    .onTapGesture {
+                        self.rating = index 
+                    }
+            }
         }
     }
 }
 
 struct ImageDisplay_Previews: PreviewProvider {
     static var previews: some View {
-        ImageDisplay()
+        ImageDisplay(rating: .constant(2))
     }
 }
