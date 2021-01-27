@@ -9,22 +9,17 @@ import SwiftUI
 
 struct PracticeElements: View {
     
-    @State private var searchTerm: String = ""
+   
+    @ObservedObject var settingVM = SearchBar()
     
-    let names = ["lu", "sue", "drew", "few", "moo"]
-    
-    private var reportModel = ReportModel.all()
     var body: some View {
-        List {
-            SearchBar(text: $searchTerm)
+        VStack(alignment: .center) {
+            Toggle(isOn: self.$settingVM.isOn){
+                Text("")
+            }.fixedSize()
             
-            ForEach(self.names.filter {
-                self.searchTerm.isEmpty ? true :
-                    $0.localizedCaseInsensitiveContains(self.searchTerm)
-            }, id: \.self) { name in
-                Text(name)
-            }
-        }
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(self.$settingVM.isOn.wrappedValue ? Color.green : Color.red)
     }
 }
 
