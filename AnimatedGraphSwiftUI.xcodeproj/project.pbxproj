@@ -19,6 +19,8 @@
 		C05BEDA325BB409800CD9111 /* NewForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BEDA225BB409800CD9111 /* NewForm.swift */; };
 		C05BEDA725BB5C1300CD9111 /* ListandForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BEDA625BB5C1300CD9111 /* ListandForm.swift */; };
 		C05BEDAA25BB6A5D00CD9111 /* ModalPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BEDA925BB6A5D00CD9111 /* ModalPractice.swift */; };
+		C0D7043025C1C0B8002EA0F6 /* PracticeElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7042F25C1C0B8002EA0F6 /* PracticeElements.swift */; };
+		C0D7043325C1C784002EA0F6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7043225C1C784002EA0F6 /* SearchBar.swift */; };
 		C0D9273825BCCF66000B70B4 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9273725BCCF66000B70B4 /* FlagViewModel.swift */; };
 		C0E72CFC25BCB58600964EDF /* FlagDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E72CFB25BCB58600964EDF /* FlagDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		C05BEDA225BB409800CD9111 /* NewForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForm.swift; sourceTree = "<group>"; };
 		C05BEDA625BB5C1300CD9111 /* ListandForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListandForm.swift; sourceTree = "<group>"; };
 		C05BEDA925BB6A5D00CD9111 /* ModalPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPractice.swift; sourceTree = "<group>"; };
+		C0D7042F25C1C0B8002EA0F6 /* PracticeElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeElements.swift; sourceTree = "<group>"; };
+		C0D7043225C1C784002EA0F6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C0D9273725BCCF66000B70B4 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
 		C0E72CFB25BCB58600964EDF /* FlagDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,8 +80,10 @@
 				C034175325BA0219007E53AA /* SceneDelegate.swift */,
 				C034176925BA07B2007E53AA /* ReportModel.swift */,
 				C0E72CFB25BCB58600964EDF /* FlagDetailView.swift */,
+				C0D7043225C1C784002EA0F6 /* SearchBar.swift */,
 				C034176625BA041C007E53AA /* BarGraph.swift */,
 				C0D9273725BCCF66000B70B4 /* FlagViewModel.swift */,
+				C0D7042F25C1C0B8002EA0F6 /* PracticeElements.swift */,
 				C05BEDA625BB5C1300CD9111 /* ListandForm.swift */,
 				C05BEDA225BB409800CD9111 /* NewForm.swift */,
 				C05BEDA925BB6A5D00CD9111 /* ModalPractice.swift */,
@@ -169,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D7043325C1C784002EA0F6 /* SearchBar.swift in Sources */,
 				C034176725BA041C007E53AA /* BarGraph.swift in Sources */,
 				C034176D25BA13F6007E53AA /* Card.swift in Sources */,
 				C034175225BA0219007E53AA /* AppDelegate.swift in Sources */,
@@ -178,6 +185,7 @@
 				C034175425BA0219007E53AA /* SceneDelegate.swift in Sources */,
 				C05BEDA325BB409800CD9111 /* NewForm.swift in Sources */,
 				C034175625BA0219007E53AA /* ContentView.swift in Sources */,
+				C0D7043025C1C0B8002EA0F6 /* PracticeElements.swift in Sources */,
 				C05BEDA725BB5C1300CD9111 /* ListandForm.swift in Sources */,
 				C0E72CFC25BCB58600964EDF /* FlagDetailView.swift in Sources */,
 			);

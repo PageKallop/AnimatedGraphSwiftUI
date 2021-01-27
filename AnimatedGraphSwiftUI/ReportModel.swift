@@ -25,3 +25,8 @@ extension ReportModel {
         
     }
 }
+
+struct ReportItems {
+    let year: String
+    let revenue: Double
+}
